@@ -1,0 +1,125 @@
+
+
+.flexbox-container {
+
+  align-items: stretch;
+  display: flex; // declare the box layout
+  flex-direction: column; // declare the direction, row, row-reverse, column , colun-reverse
+
+  .fl-elt {
+
+    align-items: center; // equivalent to text-align
+    border: 1px solid tomato;
+    color: #454545;
+    display: flex; // declare the same for the child
+    // flex: 1; // declare the size occupy by the element on the flow
+
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+    // the two properties above are mingle into one with this rule
+    flex-flow: column wrap;
+
+    justify-content: center; // how is the element content align, not the element itself; : flex-start, flex-end, center,   space-between, space-around
+    min-height: 150px;
+
+
+    &.fruits {
+
+      background: gainsboro;
+      border-color: darken(gainsboro, 10%);
+    }
+
+    &.salad {
+
+      background: sandybrown;
+      border-color: darken(sandybrown, 10%);
+      flex: 2;
+      // p { align-self: flex-start; // align-items define on parent element }
+    }
+    &.tomato {
+
+      background: tomato;
+      border-color: darken(tomato, 10%);
+    }
+    &.beacon {
+
+      background: burlywood;
+      border-color: darken(burlywood, 10%);
+      flex: 2;
+      // p { align-self: flex-start; // align-items define on parent element }
+    }
+    &.pizza {
+
+      background: palegreen;
+      border-color: darken(palegreen, 10%);
+    }
+
+    p {
+      display: flex;
+      margin: 0;
+    }
+
+
+    &:nth-chil(1n + 1) {
+      background: tomato;
+    }
+
+  }
+
+}
+
+
+.flex-grids {
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+  .flex-cell {
+
+    border: 1px solid tomato;
+    color: #454545;
+    flex: 0 0 auto;
+    min-height: 10rem;
+    padding: 0 10px;
+
+    .text {
+      display: flex;
+      margin: 0;
+    }
+
+    &.fruits {
+
+      background: gainsboro;
+      border-color: darken(gainsboro, 10%);
+    }
+
+    &.salad {
+
+      background: sandybrown;
+      border-color: darken(sandybrown, 10%);
+      flex: 2;
+      // p { align-self: flex-start; // align-items define on parent element }
+    }
+    &.tomato {
+
+      background: tomato;
+      border-color: darken(tomato, 10%);
+    }
+    &.beacon {
+
+      background: burlywood;
+      border-color: darken(burlywood, 10%);
+      flex: 2;
+      // p { align-self: flex-start; // align-items define on parent element }
+    }
+    &.pizza {
+
+      background: palegreen;
+      border-color: darken(palegreen, 10%);
+    }
+
+  }
+}
